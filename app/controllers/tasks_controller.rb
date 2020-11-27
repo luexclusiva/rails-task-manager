@@ -7,7 +7,7 @@ class TasksController < ApplicationController
   end
 
   def show
-    @task = Task.find(params[:id])
+    # @task = Task.find(params[:id])
   end
 
   def new
@@ -22,7 +22,7 @@ class TasksController < ApplicationController
   end
 
   def edit
-    @task = Task.find(params[:id])
+    # @task = Task.find(params[:id])
   end
 
   # Envia os dados para o BD, via post
@@ -33,7 +33,7 @@ class TasksController < ApplicationController
 
   def destroy
     @task.destroy
-    redirect_to root_path
+    redirect_to tasks_path
   end
 
   private

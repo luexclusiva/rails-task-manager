@@ -1,7 +1,7 @@
 <h1>My tasks</h1>
 
 <% @tasks.each do |task| %>
-  <input type="checkbox" name="check_task" id="">
+  <input type="checkbox" name="check_task" id="" <%= task.completed? ? 'checked' : '' %> disabled>
   <label for="check_task"><%= link_to task.title, task_path(task) %></label>
   <label><%= link_to "Excluir", task_path(task), method: :delete, data: { confirm: "Delete #{task.title}?" } %></label>
   <br>
